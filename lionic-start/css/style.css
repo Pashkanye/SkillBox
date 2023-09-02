@@ -133,6 +133,7 @@ body {
   font-weight: 600;
   color: #1c1c1c;
   font-size: 15px;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-link:focus {
@@ -153,6 +154,7 @@ body {
   height: 2px;
   background-color: #3474BA;
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .header-link:active::after {
@@ -174,6 +176,7 @@ body {
   background-color: #3172b9;
   color: #fff;
   border-radius: 3px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn::after {
@@ -187,6 +190,7 @@ body {
   border: 1px solid #3172b9;
   outline: none;
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .btn:focus::after {
@@ -293,6 +297,7 @@ body {
   width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   border: 1px solid #e4e4e4;
   border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .services-item:hover {
@@ -306,6 +311,7 @@ body {
 
 .services-item-icon path {
   fill: #3172b9;
+  transition: fill 0.3s ease-in-out;
 }
 
 .services-item:hover .services-item-icon path {
@@ -319,6 +325,7 @@ body {
   font-size: 20px;
   line-height: 130%;
   color: #1c1c1c;
+  transition: color 0.3s ease-in-out;
 }
 
 .services-item:hover .services-item-title {
@@ -332,6 +339,7 @@ body {
   font-size: 14px;
   line-height: 150%;
   color: #787878;
+  transition: color 0.3s ease-in-out;
 }
 
 .services-item:hover .services-item-descr {
@@ -376,6 +384,7 @@ body {
   font-size: 10px;
   line-height: 150%;
   color: #787878;
+  transition: color 0.3s ease-in-out;
 }
 
 .blog-preview-title {
@@ -385,6 +394,7 @@ body {
   font-size: 20px;
   line-height: 130%;
   color: #1c1c1c;
+  transition: color 0.3s ease-in-out;
 }
 
 .blog-preview-descr {
@@ -394,12 +404,14 @@ body {
   font-size: 14px;
   line-height: 150%;
   color: #787878;
+  transition: color 0.3s ease-in-out;
 }
 
 .blog-preview-link {
   display: flex;
   position: relative;
   width: 100%;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .blog-preview-link:focus {
@@ -571,6 +583,7 @@ body {
   font-size: 14px;
   line-height: 180%;
   color: #787878;
+  transition: color 0.3s ease-in-out;
 }
 
 .contacts-item-link:focus {
@@ -630,6 +643,7 @@ body {
   padding: 16px 28px;
   width: 251px;
   height: 60px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .form-input:nth-child(-n+2) {
@@ -657,6 +671,7 @@ body {
   padding: 16px 28px;
   width: 251px;
   height: 60px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .form-select:focus {
@@ -681,6 +696,7 @@ body {
   padding: 16px 28px;
   width: 100%;
   height: 100%;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .form-textarea:focus {
@@ -748,10 +764,42 @@ body {
 }
 
 .footer-link {
+  position: relative;
   color: #787878;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-link:focus {
+  outline-offset: 2px;
+  outline: 1px solid #71A7E2;
+}
+
+.footer-link:hover {
+  color: #71A7E2;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3474BA;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer-link:active::after {
+  opacity: 1;
+}
+
+.footer-link:active {
+  color: #3172b9;
+  outline: none;
 }
 
 .social-item:not(:last-child) {
@@ -768,6 +816,7 @@ body {
 
 .social-link svg {
   fill: #000;
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
 .social-link-mail svg {
