@@ -54,6 +54,10 @@ body {
   font-weight: 400;
 }
 
+:root {
+  --gap: 30px;
+}
+
 /* glob */
 .list-reset {
   margin: 0;
@@ -475,17 +479,19 @@ body {
   border-bottom: 1px solid #dadada;
 }
 
+.clients-list {
+  --offsets: 2;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
 .clients-item {
   flex-direction: column;
-  width: 370px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   padding: 50px 36px;
   padding-bottom: 30px;
   border: 1px solid #e4e4e4;
   border-radius: 5px;
-}
-
-.clients-item:not(:nth-child(3n)) {
-  margin-right: 30px;
 }
 
 .clients-item-descr {
@@ -542,17 +548,19 @@ body {
   font-style: normal;
 }
 
+.contacts-list {
+  --offsets: 2;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
 .contacts-item {
   flex-direction: column;
-  width: 370px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 29px 29px;
   padding-top: 48px;
-}
-
-.contacts-item:not(:nth-child(3n)) {
-  margin-right: 30px;
 }
 
 .contacts-item-address {
